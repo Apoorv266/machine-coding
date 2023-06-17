@@ -62,6 +62,6 @@ export const BooksData = [
         bookName: "Be You. Now!",
         image: "https://m.media-amazon.com/images/I/71SH7FPUPoL.jpg",
         author: "Sagar Makwana ",
-        category: "read"
+        category: "Want to read"
     }
 ]

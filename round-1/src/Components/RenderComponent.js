@@ -26,9 +26,9 @@ const RenderComponent = ({ data, filterVal }) => {
         return (
           <div key={item.id}>
             <img src={item.image} alt="" srcSet="" height={"300px"} />
-            <p>Title : {item.bookName}</p>
-            <p>Author : {item.author}</p>
-            <p>Shelf category :{item.category}</p>
+            <p><strong>Title :</strong> {item.bookName}</p>
+            <p><strong>Author : </strong>{item.author}</p>
+            <p><strong>Shelf category : </strong>{item.category}</p>
             <button onClick={()=>handleClick(item.id)}>Select category</button>
             <div>
             {(item.id === CurrentId && openModal) && (
