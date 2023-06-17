@@ -5,9 +5,8 @@ import { bookContext } from "./Contexts/BookContext";
 const RenderComponent = ({ data, filterVal }) => {
     const booksArrayData = filterVal === "All" ? data : data.filter((item) => item.category === filterVal)
 
-    const {categoryFunc, categoryArray} = useContext(bookContext)
+    const {categoryFunc, categoryArray, setopenModal, openModal} = useContext(bookContext)
 
-  const [openModal, setopenModal] = useState(false);
   const [CurrentId, setCurrentId] = useState("");
   
 
@@ -27,12 +26,11 @@ const RenderComponent = ({ data, filterVal }) => {
         return (
           <div key={item.id}>
             <img src={item.image} alt="" srcSet="" height={"300px"} />
-            <p>{item.bookName}</p>
-            <p>{item.author}</p>
-            <p>{item.category}</p>
+            <p>Title : {item.bookName}</p>
+            <p>Author : {item.author}</p>
+            <p>Shelf category :{item.category}</p>
             <button onClick={()=>handleClick(item.id)}>Select category</button>
-
-
+            <div>
             {(item.id === CurrentId && openModal) && (
               <select onChange={(e)=>handleCategoryDropdown( e,item.id)}>
                 <option value="moveto" disabled selected="selected">Move to</option>
@@ -41,6 +39,7 @@ const RenderComponent = ({ data, filterVal }) => {
                 })}
               </select>
             )}
+            </div>
           </div>
         );
       })}
