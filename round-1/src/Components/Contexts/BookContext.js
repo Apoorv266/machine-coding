@@ -5,7 +5,7 @@ export const bookContext = createContext()
 const BookContextProvider = ({children}) => {
     const [booksDataArr, setbooksDataArr] = useState(BooksData)
     const [inputData, setinputData] = useState("")
-    const [openModal, setopenModal] = useState(false);
+   
 
     const categoryArray = BooksData.reduce((acc, curr) => acc.includes(curr.category) ? acc : [...acc, curr.category], [])
 
@@ -17,7 +17,7 @@ const BookContextProvider = ({children}) => {
 
     const filteredData = inputData ? booksDataArr.filter((item) => item.bookName.toLowerCase().includes(inputData.toLowerCase()) || item.author.toLowerCase().includes(inputData.toLowerCase())) : booksDataArr
   return (
-    <bookContext.Provider value={{categoryFunc, booksDataArr, categoryArray, setinputData, inputData, filteredData, setopenModal, openModal}}>
+    <bookContext.Provider value={{categoryFunc, booksDataArr, categoryArray, setinputData, inputData, filteredData}}>
 {children}
     </bookContext.Provider>
   )
