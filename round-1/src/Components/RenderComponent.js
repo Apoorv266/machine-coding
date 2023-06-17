@@ -29,7 +29,7 @@ const RenderComponent = ({ data, filterVal }) => {
             <p><strong>Title :</strong> {item.bookName}</p>
             <p><strong>Author : </strong>{item.author}</p>
             <p><strong>Shelf category : </strong>{item.category}</p>
-            <button onClick={()=>handleClick(item.id)}>Select category</button>
+           { openModal && item.id === CurrentId? <button onClick={()=>setopenModal(false)}>Close category</button> :    <button onClick={()=>handleClick(item.id)}>Select category</button>}
             <div>
             {(item.id === CurrentId && openModal) && (
               <select onChange={(e)=>handleCategoryDropdown( e,item.id)}>
