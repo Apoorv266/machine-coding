@@ -37,8 +37,7 @@ const RenderComponent = ({ data, filterVal }) => {
            { openModal && item.id === CurrentId? <button onClick={handleCloseClick}>Close category</button> :    <button onClick={()=>handleOpenClick(item.id)}>Select category</button>}
             <div>
             {(item.id === CurrentId && openModal) && (
-              <select onChange={(e)=>handleCategoryDropdown( e,item.id)}>
-                <option value="moveto" disabled selected="selected">Move to</option>
+              <select onChange={(e)=>handleCategoryDropdown( e,item.id)} defaultValue={item.category}>
                 {categoryArray.map((category, index) => {
                     return <option value={category} key={index} >{category === item.category && "✅"} {category}</option>
                 })}
