@@ -1,0 +1,13 @@
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 50px;
+    row-gap: 20px;
+}
+
+#inputfield{
+    width: 20vw;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-top: 30px;
+}
