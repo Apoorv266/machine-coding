@@ -6,6 +6,7 @@ const Home = () => {
     <div>
         <Link to={"/main"}><button>Access library</button></Link>
         <Link to={"/search"}><button>Search books</button></Link>
+        <h1>This is home</h1>
     </div>
   )
 }
