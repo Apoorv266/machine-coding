@@ -7,10 +7,13 @@
 }
 
 #inputfield{
-    width: 20vw;
+    width: 80%;
     border: 1px solid black;
     margin-top: 30px;
+    height: 30px;
 }
+
+
 
 
 @media only screen and (max-width : 768px) {
@@ -22,6 +25,13 @@
 @media only screen and (max-width : 425px) {
     .card-container{
         grid-template-columns: 1fr 1fr ;
+    }
+    
+    .utils{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 

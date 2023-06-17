@@ -9,10 +9,11 @@ const SearchComponent = () => {
     const navigate = useNavigate()
     return (
         <div>
+            <div className='utils'>
             <button onClick={() => navigate(-1)}>Return</button>
             <Link to={"/main"}><button>Access library</button></Link>
             <input type='text' placeholder='search books by author or title !' value={inputData} onChange={(e)=>setinputData(e.target.value)} id='inputfield'/>
-            
+            </div>
                 <RenderComponent data={filteredData} filterVal = {"All"}/>
         </div>
     )
