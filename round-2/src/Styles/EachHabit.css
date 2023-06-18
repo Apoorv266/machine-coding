@@ -1,0 +1,13 @@
+.habits-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.eachHabit-main{
+    width: 90%;
+    border: 2px solid black;
+    padding: 20px;
+    margin: auto;
+}
