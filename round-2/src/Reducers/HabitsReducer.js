@@ -1,7 +1,7 @@
 export const initialData = [
     {
         id: Math.floor(Math.random() * (999 - 100 + 1) + 100),
-        habitName: "swimming",
+        habitName: "Swimming",
         repeat: "daily",
         goal: "1 times daily",
         timesDay: "Night",
@@ -21,7 +21,7 @@ export const initialData = [
 
     {
         id: Math.floor(Math.random() * (999 - 100 + 1) + 100),
-        habitName: "Journalling",
+        habitName: "Journaling",
         repeat: "daily",
         goal: "1 times daily",
         timesDay: "Afternoon",
