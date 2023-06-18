@@ -21,6 +21,17 @@
  height: auto;
 }
 
+
+.habitDetail{
+  background-color: #262626;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+ height: auto;
+}
+
+
 /* The Close Button */
 .close {
   color: #aaaaaa;
@@ -31,7 +42,7 @@
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: rgb(149, 50, 50);
   text-decoration: none;
   cursor: pointer;
 }
@@ -51,21 +62,49 @@
 
 
 
-input{
+.modal-inputs input{
     height:30px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid black;
     background-color: #313131;
     color: white;
     padding-left: 20px;
 }
 
-select {
+
+
+select , #date-input {
   background-color:#313131 ;
   height:30px;
   width: 50%;
   color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   padding-left: 10px;
 }
 
+
+@media only screen and (max-width : 768px){
+  .habitDetail, .modal-content{
+ width: 80%;
+  }
+
+.center-modal-inputs{
+ flex-direction: column;
+  gap: 0;
+}
+
+.modal-content {
+ height: 630px;
+}
+
+.save-btn{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+select, #date-input {
+
+  width: 100%;
+
+}
+}

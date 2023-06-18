@@ -12,7 +12,7 @@
     margin: auto;
     background-color: #F7C4DC;
     border-radius: 10px;
-    height: 120px;
+    height: auto;
 }
 
  button{
@@ -28,4 +28,33 @@
 
 .nav-btn{
     margin-top: 30px;
+}
+
+.utility-btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    place-items: center;
+}
+
+@media only screen and (max-width : 768px){
+    .habits-container{
+        grid-template-columns: 1fr ;
+        gap: 10px;
+    }
+
+    .eachHabit-main{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width : 425px){
+    .utility-btns{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+    }
+
+    .eachHabit-main{
+        font-size: 13px;
+    }
 }

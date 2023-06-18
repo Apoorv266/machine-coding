@@ -68,8 +68,10 @@ const [dispDetailsModal, setdispDetailsModal] = useState(false)
         const updatedArray = state.map((item) => item.id === id ? {...item, isArchive: false} : item)
         dispatch({ type: "HANDLE_ARCHIVE_TOGGLE", payload: updatedArray })
     }
+
+
     return (
-        <habitContext.Provider value={{ state, dispatch, inputState, inputDispatch, addHabitFunc, setdispModal, dispModal, deleteFunc, editHabitFunc ,ViewHabitsFunc,dispDetailsModal, setdispDetailsModal, selectedHabit,handleArchiveFunc,handleUnArchiveFunc}}>{children}</habitContext.Provider>
+        <habitContext.Provider value={{ state, dispatch, inputState, inputDispatch, addHabitFunc, setdispModal, dispModal, deleteFunc, editHabitFunc ,ViewHabitsFunc,dispDetailsModal, setdispDetailsModal, selectedHabit,handleArchiveFunc,handleUnArchiveFunc, setselectedHabit}}>{children}</habitContext.Provider>
     )
 }
 

@@ -17,15 +17,15 @@ const HabitsHome = () => {
             {dispModal && <Modal setdispModal={setdispModal} />}
             {dispDetailsModal && <EachHabitModal setdispDetailsModal={setdispDetailsModal} />}
             <div className='habits-container' style={{ display: dispModal || dispDetailsModal ? "none" : "grid" }}>
-                <span onClick={() => setdispModal(true)} style={{cursor: "pointer"}}>
-                    <div className='eachHabit-main' >
+                <span onClick={() => setdispModal(true)} style={{ cursor: "pointer" }}>
+                    <div className='eachHabit-main' style={{height: "120px"}}>
                         <div className='habit-title'>
                             <h1>Enter your own habits !</h1>
                         </div>
                     </div>
                 </span>
                 {nonarchiveData.map((item, index) => <EachHabit item={item} key={item.id} index={
-index}/>)}
+                    index} />)}
             </div>
         </>
     )

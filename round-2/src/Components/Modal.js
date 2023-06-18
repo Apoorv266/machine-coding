@@ -3,16 +3,22 @@ import "../Styles/Modal.css"
 import { habitContext } from '../Contexts/HabitContext'
 
 const Modal = ({ setdispModal }) => {
-    const { inputState, inputDispatch, addHabitFunc } = useContext(habitContext)
+    const { inputState, inputDispatch, addHabitFunc , setselectedHabit} = useContext(habitContext)
+
+    const closeformModal = () =>{
+        setdispModal(false)
+        setselectedHabit({})
+        inputDispatch({type: "RESET"})
+      }
     return (
         <>
             <div id="myModal" className="modal">
                 <div className="modal-content">
-                    <span className="close" onClick={() => setdispModal(false)}>X</span>
+                    <span className="close" onClick={closeformModal}>X</span>
                     <p>New Habit !</p>
                     <div className='modal-inputs'>
                         <p>Habit title : </p>
-                        <input type='text' value={inputState.habitName} onChange={(e) => inputDispatch({ type: "ADD_INPUT", payload: e.target.value })} />
+                        <input type='text' value={inputState.habitName} onChange={(e) => inputDispatch({ type: "ADD_INPUT", payload: e.target.value })}  />
                         <div className='center-modal-inputs'>
                             <p>Repeat</p>
 
@@ -42,16 +48,17 @@ const Modal = ({ setdispModal }) => {
 
 
                             <p>Start date</p>
-                            <select id='center-input' value={inputState.date} onChange={(e) => inputDispatch({ type: "ADD_DATE", payload: e.target.value })}>
+                            {/* <select id='center-input' value={inputState.date} onChange={(e) => inputDispatch({ type: "ADD_DATE", payload: e.target.value })}>
                                 <option value="Today">Today</option>
                                 <option value="Tomorrow">Tomorrow</option>
                                 <option value="Next week">Next week</option>
                                 <option value="Next Month">Next Month</option>
-                            </select>
+                            </select> */}
+                            <input type="date" name="" id="date-input" value={inputState.date} onChange={(e) => inputDispatch({ type: "ADD_DATE", payload: e.target.value })}/>
                         </div>
                     </div>
                     <div className='modal-btns'>
-                        <button onClick={addHabitFunc}>Save</button>
+                        <button onClick={addHabitFunc} className='save-btn'>Save</button>
                     </div>
                 </div>
 

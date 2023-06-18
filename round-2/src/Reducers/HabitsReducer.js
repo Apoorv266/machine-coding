@@ -5,7 +5,7 @@ export const initialData = [
         repeat: "daily",
         goal: "1 times daily",
         timesDay: "Night",
-        date: "today",
+        date: "02-3-2012",
         isArchive: false
     },
 
@@ -15,7 +15,7 @@ export const initialData = [
         repeat: "daily",
         goal: "1 times daily",
         timesDay: "Evening",
-        date: "tomorrow",
+        date: "21-05-2015",
         isArchive: false
     },
 
@@ -25,7 +25,7 @@ export const initialData = [
         repeat: "daily",
         goal: "1 times daily",
         timesDay: "Afternoon",
-        date: "day after tomorrow",
+        date: "05-29-10",
         isArchive: false
     }
     , {
@@ -34,7 +34,7 @@ export const initialData = [
         repeat: "daily",
         goal: "1 times daily",
         timesDay: "Morning",
-        date: "today",
+        date: "25-01-2022",
         isArchive: false
     }
 ]
