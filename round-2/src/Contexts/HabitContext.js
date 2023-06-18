@@ -29,8 +29,6 @@ const [dispDetailsModal, setdispDetailsModal] = useState(false)
             return obj;
         })
 
-
-
         if (inputState.habitName !== "") {
             if (isObjExist) {
                 dispatch({ type: "UPDATE_HABIT", payload: upd_obj })
@@ -63,10 +61,15 @@ const [dispDetailsModal, setdispDetailsModal] = useState(false)
 
     const handleArchiveFunc = (id) =>{
         const updatedArray = state.map((item) => item.id === id ? {...item, isArchive: true} : item)
-        dispatch({ type: "ARCHIVE_HABIT", payload: updatedArray })
+        dispatch({ type: "HANDLE_ARCHIVE_TOGGLE", payload: updatedArray })
+    }
+
+    const handleUnArchiveFunc = (id) =>{
+        const updatedArray = state.map((item) => item.id === id ? {...item, isArchive: false} : item)
+        dispatch({ type: "HANDLE_ARCHIVE_TOGGLE", payload: updatedArray })
     }
     return (
-        <habitContext.Provider value={{ state, dispatch, inputState, inputDispatch, addHabitFunc, setdispModal, dispModal, deleteFunc, editHabitFunc ,ViewHabitsFunc,dispDetailsModal, setdispDetailsModal, selectedHabit,handleArchiveFunc}}>{children}</habitContext.Provider>
+        <habitContext.Provider value={{ state, dispatch, inputState, inputDispatch, addHabitFunc, setdispModal, dispModal, deleteFunc, editHabitFunc ,ViewHabitsFunc,dispDetailsModal, setdispDetailsModal, selectedHabit,handleArchiveFunc,handleUnArchiveFunc}}>{children}</habitContext.Provider>
     )
 }
 

@@ -11,10 +11,10 @@ const Modal = ({ setdispModal }) => {
                     <span className="close" onClick={() => setdispModal(false)}>X</span>
                     <p>New Habit !</p>
                     <div className='modal-inputs'>
-                        <p>NAME : </p>
+                        <p>Habit title : </p>
                         <input type='text' value={inputState.habitName} onChange={(e) => inputDispatch({ type: "ADD_INPUT", payload: e.target.value })} />
                         <div className='center-modal-inputs'>
-                            <p>Repeat : </p>
+                            <p>Repeat</p>
 
 
                             <select id='center-input' value={inputState.repeat} onChange={(e) => inputDispatch({ type: "ADD_REPEAT", payload: e.target.value })}>
@@ -23,7 +23,7 @@ const Modal = ({ setdispModal }) => {
                                 <option value="Weekends">Weekends</option>
                             </select>
 
-                            <p>Goal :</p>
+                            <p>Goal</p>
                             <select id='center-input' value={inputState.goal} onChange={(e) => inputDispatch({ type: "ADD_GOAL", payload: e.target.value })}>
                                 <option value="1 Times a day">1 Times a day</option>
                                 <option value="2 Times a day">2 Times a day</option>
@@ -32,7 +32,7 @@ const Modal = ({ setdispModal }) => {
                         </div>
 
                         <div className='center-modal-inputs'>
-                            <p>Time of day :</p>
+                            <p>Time of day</p>
                             <select id='center-input' value={inputState.timesDay} onChange={(e) => inputDispatch({ type: "ADD_TIMESDAY", payload: e.target.value })}>
                                 <option value="Morning">Morning</option>
                                 <option value="Afternoon">Afternoon</option>
@@ -41,7 +41,7 @@ const Modal = ({ setdispModal }) => {
                             </select>
 
 
-                            <p>Start date :</p>
+                            <p>Start date</p>
                             <select id='center-input' value={inputState.date} onChange={(e) => inputDispatch({ type: "ADD_DATE", payload: e.target.value })}>
                                 <option value="Today">Today</option>
                                 <option value="Tomorrow">Tomorrow</option>

@@ -1,6 +1,6 @@
 export const initialData = [
     {
-        id: Math.floor(Math.random()*(999-100+1)+100),
+        id: Math.floor(Math.random() * (999 - 100 + 1) + 100),
         habitName: "swimming",
         repeat: "daily",
         goal: "1 times daily",
@@ -10,7 +10,7 @@ export const initialData = [
     },
 
     {
-        id: Math.floor(Math.random()*(999-100+1)+100),
+        id: Math.floor(Math.random() * (999 - 100 + 1) + 100),
         habitName: "Yoga",
         repeat: "daily",
         goal: "1 times daily",
@@ -20,7 +20,7 @@ export const initialData = [
     },
 
     {
-        id: Math.floor(Math.random()*(999-100+1)+100),
+        id: Math.floor(Math.random() * (999 - 100 + 1) + 100),
         habitName: "Journalling",
         repeat: "daily",
         goal: "1 times daily",
@@ -29,7 +29,7 @@ export const initialData = [
         isArchive: false
     }
     , {
-        id: Math.floor(Math.random()*(999-100+1)+100),
+        id: Math.floor(Math.random() * (999 - 100 + 1) + 100),
         habitName: "Exercise",
         repeat: "daily",
         goal: "1 times daily",
@@ -48,7 +48,7 @@ export const habitReducerFunc = (state, action) => {
             return action.payload
         case "UPDATE_HABIT":
             return action.payload
-            case "ARCHIVE_HABIT":
+        case "HANDLE_ARCHIVE_TOGGLE":
             return action.payload
         default:
             return state

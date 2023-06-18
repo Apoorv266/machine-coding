@@ -13,18 +13,19 @@ const HabitsHome = () => {
     const nonarchiveData = state.filter((item) => !item.isArchive)
     return (
         <>
-            <Link to={"/archives"}><button>See Archives</button></Link>
+            <Link to={"/archives"}><button className='nav-btn'>See Archives</button></Link>
             {dispModal && <Modal setdispModal={setdispModal} />}
             {dispDetailsModal && <EachHabitModal setdispDetailsModal={setdispDetailsModal} />}
             <div className='habits-container' style={{ display: dispModal || dispDetailsModal ? "none" : "grid" }}>
-                <span onClick={() => setdispModal(true)} >
-                    <div className='eachHabit-main'>
+                <span onClick={() => setdispModal(true)} style={{cursor: "pointer"}}>
+                    <div className='eachHabit-main' >
                         <div className='habit-title'>
                             <h1>Enter your own habits !</h1>
                         </div>
                     </div>
                 </span>
-                {nonarchiveData.map((item) => <EachHabit item={item} key={item.id} />)}
+                {nonarchiveData.map((item, index) => <EachHabit item={item} key={item.id} index={
+index}/>)}
             </div>
         </>
     )

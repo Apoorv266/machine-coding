@@ -1,12 +1,13 @@
 .habits-container{
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
     margin-top: 50px;
+    align-items: center;
 }
 
 .eachHabit-main{
     width: 90%;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 20px;
     margin: auto;
     background-color: #F7C4DC;
@@ -14,8 +15,17 @@
     height: 120px;
 }
 
-.utility-btns button{
+ button{
     margin-right: 20px;
     height: 30px;
-    width: 80px;
+    width: 120px;
+    background-color: #477EFF;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.nav-btn{
+    margin-top: 30px;
 }
