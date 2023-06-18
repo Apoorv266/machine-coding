@@ -1,8 +1,7 @@
 .habits-container{
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
 }
 
 .eachHabit-main{
@@ -10,4 +9,13 @@
     border: 2px solid black;
     padding: 20px;
     margin: auto;
+    background-color: #F7C4DC;
+    border-radius: 10px;
+    height: 120px;
+}
+
+.utility-btns button{
+    margin-right: 20px;
+    height: 30px;
+    width: 80px;
 }

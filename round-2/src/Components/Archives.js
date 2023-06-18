@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { habitContext } from '../Contexts/HabitContext'
+import EachHabit from './EachHabit'
+import { Link } from 'react-router-dom'
 
 const Archives = () => {
+  const {state} = useContext(habitContext)
+  const archiveData = state.filter((item ) => item.isArchive)
   return (
-    <div>Archives</div>
+    <>
+    <Link to={"/"}><button>See all habits</button></Link>
+    {archiveData.map((item) =>  <EachHabit item={item} key={item.id}/>)}
+    </>
   )
 }
 
