@@ -51,8 +51,6 @@ const [dispDetailsModal, setdispDetailsModal] = useState(false)
     }
 
     const editHabitFunc = (habitItem) => {
-        console.log(habitItem)
-        console.log("edit",state)
         setdispModal(true)
         setselectedHabit(habitItem)
         inputDispatch({ type: "EDIT_HABIT", payload: habitItem })
