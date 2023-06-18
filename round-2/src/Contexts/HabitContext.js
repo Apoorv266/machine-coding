@@ -9,10 +9,10 @@ const HabitContextWrapper = ({ children }) => {
     const [dispModal, setdispModal] = useState(false)
     const [selectedHabit, setselectedHabit] = useState({})
 const [dispDetailsModal, setdispDetailsModal] = useState(false)
-    const addHabitFunc = () => {
 
+
+    const addHabitFunc = () => {
         const isObjExist = state.find((item) => item.id === selectedHabit.id)
-        console.log("isObjExist",isObjExist)
         const habitObj = {
             ...inputState,
             id: Math.floor(Math.random()*(999-100+1)+100)
@@ -41,7 +41,7 @@ const [dispDetailsModal, setdispDetailsModal] = useState(false)
             setdispModal(false)
         }
         setselectedHabit({})
-        console.log("save", state)
+        inputDispatch({type: "RESET"})
     }
 
 
