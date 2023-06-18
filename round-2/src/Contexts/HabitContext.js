@@ -40,6 +40,7 @@ const [dispDetailsModal, setdispDetailsModal] = useState(false)
             }
             setdispModal(false)
         }
+        setselectedHabit({})
         console.log("save", state)
     }
 

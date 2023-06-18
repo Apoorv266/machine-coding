@@ -9,7 +9,7 @@ const Archives = () => {
   return (
     <>
     <Link to={"/"}><button>See all habits</button></Link>
-    {archiveData.map((item) =>  <EachHabit item={item} key={item.id}/>)}
+    {archiveData.map((item) =>  <EachHabit item={item} key={item.id} isArchive={true}/>)}
     </>
   )
 }
